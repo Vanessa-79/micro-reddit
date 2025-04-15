@@ -1,4 +1,7 @@
 class User < ApplicationRecord
+  has_many :posts    #one-to-many relationship
+
+
   validates :username, presence: true, uniqueness: true, length: { minimum: 10 }
   validates :email, presence: true, uniqueness: true
   validates :bio, length: { maximum: 160 }
