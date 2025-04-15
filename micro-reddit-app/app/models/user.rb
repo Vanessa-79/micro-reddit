@@ -1,5 +1,6 @@
 class User < ApplicationRecord
   has_many :posts    #one-to-many relationship
+  has_many :comments  
 
 
   validates :username, presence: true, uniqueness: true, length: { minimum: 10 }
